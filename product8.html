@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+  /* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+   top: 0;
+  left: 0;
+  width: 96%;
+  height: 5%;
+  z-index: 100;
+  background-color: #000;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: #4da6ff;
+  font-size: 22px;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #4da6ff;
+}
+.footer {
+  background-color: #0b1a2b;
+  color: #ccc;
+  padding: 40px 20px;
+  margin-top: 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-box {
+  width: 200px;
+  margin: 10px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-box a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-box a:hover {
+  color: #4da6ff;
+}
+
+.social a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #1e2f45;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background-color: #4da6ff;
+}
+
+hr {
+  margin: 20px 0;
+  border-color: #333;
+}
+
+.copy {
+  text-align: center;
+  font-size: 14px;
+}
+/*===========product1================ */
+.images {
+  display: flex;
+  gap: 10px; /* مسافة بين الصور */
+}
+
+.images img {
+  width: 33.33%;
+  height: 400px;
+  object-fit: cover;
+}
+ @media screen and (max-width: 768px) {
+  .images {
+    flex-direction: column;
+  }
+
+  .images img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* ===========other========*/
+.product-specs {
+  background-color: #0b1a2b;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  
+  /* عرض متجاوب */
+  width: 90%;       /* 90% من عرض الشاشة */
+  max-width: 1200px; /* أقصى عرض حتى لا يصبح كبير جدًا */
+  
+  /* طول تلقائي حسب المحتوى */
+  height: auto;
+  
+  /* توسيط القسم */
+  margin: 20px auto;
+}
+.spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.spec-list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.spec-name {
+  color: #aaa;
+}
+
+.spec-value {
+  font-weight: bold;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.options button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e2f45;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.options button.selected,
+.options button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.availability {
+  font-weight: bold;
+  color: #28a745; 
+  margin-bottom: 15px;
+}
+
+.btn-add-cart {
+   display: block;
+  margin: 20px auto;
+   justify-content: center;
+  text-align: center;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-add-cart:hover {
+  background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+    
+
+<header class="navbar">
+  <h2> <i class="fa-solid fa-cubes" style="color: rgb(85, 0, 255);"></i>    Nextatech</h2>
+  <!-- navegation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="product.htm">Products</a>
+    <a href="cart.htm">Cart</a>
+    <a href="admin-login.html">Login</a>
+  </nav>
+</header>
+<div class="images">
+  <img src="airpod2.jpg">
+  <img src="airpod3.jpg">
+  <img src="airpod4.jpg">
+</div>
+ <section class="product-specs">
+
+  <!-- Specifications -->
+  <h2>Specifications</h2>
+  <ul class="spec-list">
+    <li><span class="spec-name">Processor</span> <span class="spec-value">A17 Pro</span></li>
+    <li><span class="spec-name">RAM</span> <span class="spec-value">8GB</span></li>
+    <li><span class="spec-name">Display</span> <span class="spec-value">6.7" Super Retina XDR</span></li>
+    <li><span class="spec-name">Battery</span> <span class="spec-value">4422mAh</span></li>
+    <li><span class="spec-name">Camera</span> <span class="spec-value">48MP Main + 12MP Ultra Wide + 12MP Telephoto</span></li>
+  </ul>
+
+  <hr>
+
+  <!-- Storage Options -->
+  <h3>Storage</h3>
+  <div class="options storage">
+    <button>256GB</button>
+    <button>512GB</button>
+    <button class="selected">1TB</button>
+  </div>
+
+  <!-- Color Options -->
+  <h3>Color</h3>
+  <div class="options color">
+    <button class="selected">Natural Titanium</button>
+    <button>Blue Titanium</button>
+    <button>White Titanium</button>
+    <button>Black Titanium</button>
+  </div>
+
+  <hr>
+
+  <!-- Availability -->
+  <p class="availability">In Stock (45 units)</p>
+
+  <!-- Add to Cart -->
+  <a href="#" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+
+</section>
+<!--  FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo + Description -->
+    <div class="footer-box">
+      <h2>Nextatech</h2>
+      <p>Your trusted destination for the latest tech devices and gadgets.</p>
+    </div>
+
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <p>📞 +1 234 567 8900</p>
+      <p>📧 info@Nextatech.com</p>
+      <p>📍 123 Tech Street, CA 94000</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social">
+       <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+       <a href="#"><i class="fa-brands fa-square-twitter"></i></a> 
+       <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+  <p class="copy">© 2026 Nextatech. All rights reserved.</p>
+
+</footer>
+</body>
+</html>
