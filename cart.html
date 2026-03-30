@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+        }
+
+        #cart-items {
+            min-height: 80px;
+        }
+
+        .cart {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 450px;
+            background-color: #0d0b21;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-total {
+            margin-top: auto;
+            color: white;
+        }
+
+        .checkout {
+            width: 100%;
+            padding: 10px;
+            background: rgb(19, 70, 238);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<div class="cart">
+    <h1>Shooping Cart</h1>
+    <div id="cart-items"></div>
+    <hr>
+    <div class="cart-total">
+        <hr />
+        <div class="row">
+            <p >Total:</p>
+            <p >0$</p>
+
+
+    </div>
+    <button class="checkout">checkout</button>
+        
+</div>
+
+</html>

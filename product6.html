@@ -102,7 +102,7 @@ hr {
 /*===========product1================ */
 .images {
   display: flex;
-  gap: 10px; /* مسافة بين الصور */
+  gap: 10px; 
 }
 
 .images img {
@@ -127,15 +127,9 @@ hr {
   padding: 20px;
   border-radius: 10px;
   font-family: Arial, sans-serif;
-  
-  /* عرض متجاوب */
-  width: 90%;       /* 90% من عرض الشاشة */
-  max-width: 1200px; /* أقصى عرض حتى لا يصبح كبير جدًا */
-  
-  /* طول تلقائي حسب المحتوى */
+  width: 90%;   
+  max-width: 1200px; 
   height: auto;
-  
-  /* توسيط القسم */
   margin: 20px auto;
 }
 .spec-list {
@@ -204,10 +198,16 @@ hr {
 .btn-add-cart:hover {
   background-color: #0056b3;
 }
+.price {
+   font-size: 28px; 
+   font-weight: bold;
+    color: #00d4ff;
+     margin: 10px 20px;
+     }
 </style>
 </head>
 <body>
-    
+    select
 
 <header class="navbar">
   <h2> <i class="fa-solid fa-cubes" style="color: rgb(85, 0, 255);"></i>    Nextatech</h2>
@@ -225,15 +225,17 @@ hr {
   <img src="dell1.jpg">
 </div>
  <section class="product-specs">
+  <h1>Dell XPS 15</h1>
+<p class="price">$2,199</p>
 
   <!-- Specifications -->
   <h2>Specifications</h2>
   <ul class="spec-list">
-    <li><span class="spec-name">Processor</span> <span class="spec-value">A17 Pro</span></li>
-    <li><span class="spec-name">RAM</span> <span class="spec-value">8GB</span></li>
-    <li><span class="spec-name">Display</span> <span class="spec-value">6.7" Super Retina XDR</span></li>
-    <li><span class="spec-name">Battery</span> <span class="spec-value">4422mAh</span></li>
-    <li><span class="spec-name">Camera</span> <span class="spec-value">48MP Main + 12MP Ultra Wide + 12MP Telephoto</span></li>
+    <li><span class="spec-name">brand</span> <span class="spec-value"> Dell xps</span></li>
+    <li><span class="spec-name">Processor</span> <span class="spec-value">Intel Core i7-13700H</span></li>
+    <li><span class="spec-name">RAM</span> <span class="spec-value">16 GB DDR5</span></li>
+    <li><span class="spec-name">Battery</span> <span class="spec-value">Up to 13 hours</span></li>
+    <li><span class="spec-name">description</span> <span class="spec-value">The XPS 15 brings stunning OLED performance to a premium, compact design</span></li>
   </ul>
 
   <hr>
@@ -243,15 +245,13 @@ hr {
   <div class="options storage">
     <button>256GB</button>
     <button>512GB</button>
-    <button class="selected">1TB</button>
+    <button>1TB</button>
   </div>
 
   <!-- Color Options -->
   <h3>Color</h3>
   <div class="options color">
-    <button class="selected">Natural Titanium</button>
-    <button>Blue Titanium</button>
-    <button>White Titanium</button>
+    <button>gree Titanium</button>
     <button>Black Titanium</button>
   </div>
 
