@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+        }
+
+        .header {
+            color: white;
+            margin-bottom: 5px;
+            margin-left: 15px;
+            margin-right: 10px;
+
+        }
+         .header h1{
+            margin-bottom:0;
+         }
+        .subtitle {
+            font-size: 14px;
+            font-weight: normal;
+            color: #9ca3af;
+            font-family: Arial, sans-serif;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .box {
+            width: fit-content;
+            height: 100vh;
+            background-color: rgb(17, 17, 58);
+            position: absolute;
+            text-align: left;
+            
+        }
+
+        .menu_icon_box {
+            width: 15px;
+            height: 15px;
+            margin: 5px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1000;
+            position: relative;
+        }
+
+        .menu_icon_box div {
+            height: 3px;
+            background-color: rgb(172, 171, 171);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+
+        .menu_icon_box.active .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu_icon_box.active .line2 {
+            opacity: 0;
+        }
+
+        .menu_icon_box.active .line3 {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #0f1722;
+            align-items: center;
+            margin: 0;
+            color: white;
+        }
+
+        .navbar .menu_icon_box {
+            margin-right: 20px;
+        }
+
+        .navbar .nav-title {
+            margin-right: auto;
+        }
+
+        .navbar p {
+            margin-right: 20px;
+        }
+
+        .logout {
+            padding: 4px;
+            background-color: #f1f1f3;
+            border: none;
+            font-size: 15px;
+            height: 30px;
+            border-radius: 5px;
+            color: #cccaca;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout:hover {
+            background-color: #1f2937;
+        }
+
+        .logout:active {
+            background-color: #1f2937;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+
+            background-color: #0f1722;
+            border-radius: 10px;
+            border: 1px solid rgb(81, 83, 81);
+            padding: 20px;
+
+
+        }
+
+        .search {
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 10px;
+            border: 1px solid rgb(81, 83, 81);
+            background-color: #0f1722;
+            position: relative;
+
+        }
+
+        .search input {
+            width: 1200px;
+            padding: 10px 10px 10px 30px;
+            border-radius: 8px;
+            border: none;
+            background: #1f2937;
+
+        }
+
+        .search i {
+            position: relative;
+            left: 15px;
+            top: 20%;
+            transform: translateY(-50%);
+            color: #5a5c5f;
+        }
+
+        .orders {
+            background-color: #0f1722;
+            border-radius: 10px;
+            border: 1px solid rgb(81, 83, 81);
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .order {
+            background-color: #0f1722;
+            border-radius: 10px;
+            border: 1px solid rgb(81, 83, 81);
+            padding: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <nav>
+            <div class="menu_icon_box">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <h1 class="nav-title">NexaTech</h1>
+        <p>Admin User</p>
+        <button class="logout">Logout</button>
+
+    </div>
+    <div class="header">
+        <h1>Dashboard</h1>
+        <p class="subtitle">Welcome to NexaTech Store Admin Portal</p>
+        <div class="cards">
+            <div class="card">
+                <p>Total Products</p>
+                <p class="number" id="products"></p>
+            </div>
+            <div class="card">
+                <p>Total Orders</p>
+                <p class="number" id="orders"></p>
+            </div>
+            <div class="card">
+                <p>Total Users</p>
+                <p class="number" id="users"></p>
+            </div>
+            <div class="card">
+                <p>Revenue</p>
+                <p class="number" id="products">$</p>
+            </div>
+
+        </div>
+        <div class="search">
+            <h3>Quick Search & Filters</h3>
+            <input type="text" placeholder="Search Orders by ID,customer name....">
+        </div>
+        <div class="orders">
+            <h3>Recent Orders</h3>
+            <div class="order">
+
+            </div>
+            <div class="order">
+
+            </div>
+            <div class="order">
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
