@@ -7,6 +7,7 @@
         body {
             background-color: black;
             margin: 0;
+            padding-top: 8%;
 
         }
 
@@ -74,23 +75,30 @@
         .menu_icon_box.active .line3 {
             transform: rotate(-45deg) translate(5px, -5px);
         }
-
-        .navbar {
+         .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 96%;
+            height: 8%;
+            z-index: 100;
+            background-color: #000;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
-            padding: 10px;
-            background-color: #0f1722;
             align-items: center;
             color: white;
-
         }
+
+       
 
         .navbar .menu_icon_box {
             margin-right: 20px;
         }
 
-        .navbar .nav-title {
+       .navbar .nav-title {
             margin-right: auto;
+            color: rgb(16, 120, 238);
         }
 
         .navbar p {
@@ -248,13 +256,14 @@
             margin-top: auto;
             padding: 20px;
             width: 400px;
-            margin-left: 400px;
-            margin-bottom: 50px;
+            bottom: 20px;
+            margin-left: 80px;
             background-color: #182435;
             border-radius: 10px;
             border: 1px solid rgb(165, 163, 163);
             background-color: #0f1722;
             color: white;
+            
         }
 
         .add-product:hover {
@@ -270,7 +279,7 @@
 <body>
 
 
-    <div class="navbar">
+   <div class="navbar">
         <nav>
             <div class="menu_icon_box">
                 <div class="line1"></div>
@@ -278,7 +287,7 @@
                 <div class="line3"></div>
             </div>
         </nav>
-        <h1 class="nav-title">NexaTech</h1>
+        <h1 class="nav-title"> <i class="fa-solid fa-cubes" style="color: rgb(17, 29, 187);"></i> NexaTech</h1>
         <p>Admin User</p>
         <button class="logout"><a href="adminlogin.html">Logout</a></button>
 
