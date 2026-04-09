@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            color: white;
+            margin-left: 90px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+        }
+
+        .box {
+            width: fit-content;
+            height: 100vh;
+            background-color: rgb(17, 17, 58);
+            position: absolute;
+            text-align: left;
+            
+        }
+        
+        .menu_icon_box {
+            width: 40px;
+            height: 30px;
+            margin: 20px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1000;
+            position: relative;
+        }
+
+        .menu_icon_box div {
+            height: 4px;
+            background-color: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+
+        .menu_icon_box.active .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu_icon_box.active .line2 {
+            opacity: 0;
+        }
+
+        .menu_icon_box.active .line3 {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .box ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 50px;
+        }
+
+        .box ul li {
+            margin-bottom: 20px;
+        }
+
+        .box ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box ul li a:hover {
+            color: #1b28df;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu_icon_box">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="box">
+            <div class="header">
+                <h1>NexaTech</h1>
+            </div>
+
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-th"></i> Dashboard</a></li>
+                <li><a href="Productsmanagement.html"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Users</a></li>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+    
+</body>
+
+</html>
