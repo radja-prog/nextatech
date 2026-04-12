@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
- <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -87,24 +89,67 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            
         }
 
-        .checkout a {
-            color: white;
-            text-decoration: none;
+    
+
+        .checkout:hover {
+            background-color: rgb(19, 19, 190);
+        }
+
+        .checkout:active {
+            background-color: rgb(19, 19, 190);
         }
 
         .row {
             display: flex;
             justify-content: space-between;
-            margin: 10px 0;
+            margin: 10px 12px;
+        }
+
+        /* ================= MOBILE ================= */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .navbar nav {
+                margin-top: 10px;
+            }
+
+            .navbar a {
+                display: block;
+                margin: 8px 0;
+            }
+            .cart {
+                top: 12%;
+                width: 100%;
+                padding: 10px;
+            }
+
+            .cart h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            
+            .checkout {
+                width: 100%;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="navbar">
+    <header class="navbar">
         <h2> <i class="fa-solid fa-cubes" style="color:  rgb(17, 29, 187);"></i> NexaTech</h2>
         <nav>
             <a href="index.html">Home</a>
@@ -112,8 +157,8 @@
             <a href="cart.html">Cart</a>
             <a href="#">Login</a>
         </nav>
-    </div>
-    <div class="cart">
+    </header>
+    <section class="cart">
         <h1>Shopping Cart</h1>
         <div id="cart-items"></div>
         <hr>
@@ -125,10 +170,10 @@
 
 
             </div>
-             <button class="checkout"> <a href="checkout.html" >checkout</a></button> 
+            <a href="checkout.html" class="checkout">checkout</a>
 
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
